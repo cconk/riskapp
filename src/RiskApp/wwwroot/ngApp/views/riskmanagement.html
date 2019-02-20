@@ -1,0 +1,18 @@
+﻿<h2>Risk Management</h2>
+<p>
+    {{controller.message}}
+</p>
+
+<div>
+    <form class="form-horizontal" >
+        <select class="form-control" ng-model="controller.selectedOrg.orgName" ng-options="selectedOrg.orgName as selectedOrg.orgName for selectedOrg in controller.organizations" ng-change="controller.getSelectedOrg()">
+            <option value="0">Default</option>
+        </select>
+    </form>
+    <div>
+        <button ng-click="controller.showAddOrgModal()">Add Organization</button>
+    </div>
+    <div>
+        <button ng-click="controller.showUpdateOrgModal()">Update Organization</button>
+    </div>
+</div>
